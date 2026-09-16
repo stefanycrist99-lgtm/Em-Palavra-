@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Em Palavra — Estudo Bíblico Interativo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="app">
+<header class="top"><div class="logo">Em Palavra<small>estudo bíblico interativo</small></div><button onclick="randomStudy()">✦ Estudo surpresa</button></header>
+<nav class="nav">
+<button class="chip active" onclick="tab('inicio',this)">Início</button><button class="chip" onclick="tab('biblia',this)">📖 Bíblia</button><button class="chip" onclick="tab('personagens',this)">👤 Personagens</button><button class="chip" onclick="tab('parabolas',this)">🕊️ Parábolas</button><button class="chip" onclick="tab('temas',this)">💡 Temas</button><button class="chip" onclick="tab('linha',this)">⏳ Linha do tempo</button><button class="chip" onclick="tab('busca',this)">🔎 Buscar</button>
+</nav>
+
+<section id="inicio" class="view show">
+<div class="hero"><div class="eyebrow">Leia • compreenda • contextualize • aplique</div><h1>Não leia apenas o versículo.<br>Entenda a história.</h1><p>Um espaço para estudar a Bíblia observando o texto, o contexto histórico e cultural, personagens, lugares, interpretação, referências cruzadas, cuidados na leitura, aplicação e reflexão.</p><div class="actions"><button class="primary" onclick="showChapter(5)">Continuar em Levítico 9 →</button><button onclick="showChapter(7)">Ver Levítico 3–5</button></div></div>
+<div class="grid"><div class="card click" onclick="showChapter(1)"><div class="icon">🔥</div><h3>Capítulo do dia</h3><p>Levítico 9 — serviço sacerdotal e manifestação da glória do Senhor.</p></div><div class="card click" onclick="showChapter(2)"><div class="icon">🌾</div><h3>Próximo capítulo</h3><p>Levítico 9–11 — sacerdócio, santidade e pureza.</p></div><div class="card click" onclick="tab('busca',this)"><div class="icon">🔎</div><h3>Pesquisa</h3><p>Encontre estudos por palavra, personagem, tema ou referência.</p></div></div>
+<div class="panel"><h2>Como estudar?</h2><div class="grid"><div class="section"><h3>1. O que o texto diz?</h3><p>Observe acontecimentos, repetições, personagens, verbos, instruções e palavras-chave antes de concluir o significado.</p></div><div class="section"><h3>2. O que significava?</h3><p>Considere o contexto literário, histórico, cultural e a situação original dos primeiros leitores.</p></div><div class="section"><h3>3. O que revela?</h3><p>Pergunte o que o capítulo mostra sobre Deus, o ser humano, pecado, culto, relacionamento e comunidade.</p></div><div class="section"><h3>4. Como interpretar?</h3><p>Compare com outras passagens sem usar referências cruzadas para apagar o sentido original.</p></div><div class="section"><h3>5. Como aplicar?</h3><p>Leve a verdade do texto para a vida atual sem transformar leis, símbolos ou costumes antigos automaticamente em regras modernas.</p></div><div class="section"><h3>6. Como responder?</h3><p>Termine com reflexão, oração, versículo-chave e uma atitude prática coerente com o que foi aprendido.</p></div></div></div>
+</section>
+
+<section id="capitulo" class="panel view"><div class="eyebrow">Estudo • livro • capítulo</div><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap"><div><h2 id="chapterTitle"></h2><div class="meta" id="chapterMeta"></div></div><div class="actions" style="margin-top:0"><button onclick="prevChapter()">← Anterior</button><button onclick="nextChapter()">Próximo →</button></div></div>
+<div class="chapter-tabs"><button class="ct active" onclick="chapterTab('visao',this)">Visão geral</button><button class="ct" onclick="chapterTab('contexto',this)">Contexto</button><button class="ct" onclick="chapterTab('interpretacao',this)">Interpretação</button><button class="ct" onclick="chapterTab('aplicacao',this)">Aplicação</button><button class="ct" onclick="chapterTab('reflexao',this)">Reflexão & quiz</button></div><div id="chapterContent"></div>
+<div class="actions"><button onclick="studyMode()">📝 Modo estudo</button><button onclick="toggleFavorite()">♡ <span id="favText">Salvar estudo</span></button><button onclick="printStudy()">🖨️ Imprimir</button></div><div id="studyBox" class="studybox" style="display:none"></div></section>
+
+<section id="biblia" class="panel view"><h2>📖 Bíblia</h2><p class="meta">Livros organizados para expansão futura. Os capítulos marcados já possuem estudo interativo nesta versão.</p><div class="grid" id="books"></div></section>
+<section id="personagens" class="panel view"><h2>👤 Personagens</h2><p class="meta">Conheça pessoas dentro da narrativa, sem separar personagem de contexto.</p><div class="grid"><div class="card"><h3>Moisés</h3><p>Chamado, liderança, intercessão e encontro com Deus.</p></div><div class="card"><h3>Aarão</h3><p>Irmão de Moisés e sacerdote; liderança, responsabilidade e limites.</p></div><div class="card"><h3>Bezalel</h3><p>Artesão capacitado para o trabalho do santuário.</p></div><div class="card"><h3>Abraão</h3><p>Promessa, fé e aliança.</p></div><div class="card"><h3>José</h3><p>Família, Egito, sofrimento e providência.</p></div><div class="card"><h3>Jesus</h3><p>Evangelhos, Reino de Deus, ensino e obra redentora.</p></div></div></section>
+<section id="parabolas" class="panel view"><h2>🕊️ Parábolas</h2><div class="grid"><div class="card"><h3>Bom Samaritano</h3><p>Lucas 10:25–37 • misericórdia e próximo.</p></div><div class="card"><h3>Filho Pródigo</h3><p>Lucas 15:11–32 • arrependimento, graça e restauração.</p></div><div class="card"><h3>Semeador</h3><p>Mateus 13:1–23 • diferentes respostas à Palavra.</p></div><div class="card"><h3>Ovelha Perdida</h3><p>Lucas 15:1–7 • busca e alegria.</p></div></div></section>
+<section id="temas" class="panel view"><h2>💡 Temas</h2><div class="grid"><div class="card"><h3>Holiness / Santidade</h3><p>Como a Bíblia apresenta separação, consagração e vida diante de Deus.</p></div><div class="card"><h3>Sacrifícios</h3><p>Levítico 1–7 • diferentes ofertas e suas funções.</p></div><div class="card"><h3>Presença de Deus</h3><p>Êxodo 25–40 • tabernáculo, presença e reverência.</p></div><div class="card"><h3>Fé e obediência</h3><p>Textos narrativos e legais em diálogo com o restante das Escrituras.</p></div></div></section>
+<section id="linha" class="panel view"><h2>⏳ Linha do tempo</h2><div class="timeline"><div class="event"><b>Criação</b>Gênesis 1–2</div><div class="event"><b>Abraão</b>Gênesis 12+</div><div class="event"><b>José</b>Gênesis 37–50</div><div class="event"><b>Êxodo</b>Êxodo 1+</div><div class="event"><b>Sinai</b>Êxodo 19+</div><div class="event"><b>Tabernáculo</b>Êxodo 25–40</div><div class="event"><b>Levítico</b>Levítico 1+</div><div class="event"><b>Reino</b>Samuel–Reis</div><div class="event"><b>Exílio</b>Profetas / Reis</div><div class="event"><b>Jesus</b>Evangelhos</div><div class="event"><b>Igreja</b>Atos</div></div></section>
+<section id="busca" class="panel view"><h2>🔎 Buscar na Bíblia</h2><p class="meta">Nesta versão, a pesquisa percorre os estudos disponíveis no interativo.</p><div class="search"><input id="q" placeholder="Ex.: sacrifício, Moisés, sangue, gratidão, Levítico 2:13" onkeydown="if(event.key==='Enter')doSearch()"><button class="primary" onclick="doSearch()">Buscar</button></div><div id="results"></div></section>
+<footer>Em Palavra • estudo bíblico interativo • Êxodo 2–4 e Levítico 1–5 incluídos</footer>
+</div>
+
+<section id="chronoApp"><div class="chronoHead"><h2>📅 Calendário cronológico de estudos</h2><p>Um capítulo por dia seguindo a linha do tempo. O ciclo completo possui <b>1.189 estudos</b>.</p><p>Estudo de hoje: <b id="chronoToday"></b></p><button onclick="openChronoToday()">Abrir estudo de hoje</button></div><div id="chronoList"></div></section>
+
+
+<script src="data-01.js"></script>
+<script src="data-02.js"></script>
+<script src="data-03.js"></script>
+<script src="data-04.js"></script>
+<script src="data-05.js"></script>
+<script src="data-06.js"></script>
+<script src="data-07.js"></script>
+<script src="data-08.js"></script>
+<script src="data-09.js"></script>
+<script src="data-10.js"></script>
+<script src="data-11.js"></script>
+<script src="data-12.js"></script>
+<script src="app.js"></script>
+<script src="chrono.js"></script>
+</body></html>
