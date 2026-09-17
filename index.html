@@ -204,6 +204,105 @@ body{background:radial-gradient(circle at 10% 0%,rgba(184,135,80,.12),transparen
 }
 </style>
 
+
+<style id="ep-mobile-card-fix">
+@media(max-width:700px){
+  .today-study{
+    display:flex!important;
+    flex-direction:column!important;
+    min-height:0!important;
+    height:auto!important;
+    overflow:hidden!important;
+    border-radius:22px!important;
+  }
+  .today-photo{
+    position:relative!important;
+    inset:auto!important;
+    order:1!important;
+    width:100%!important;
+    height:230px!important;
+    min-height:230px!important;
+    opacity:1!important;
+    overflow:hidden!important;
+    background:#dfc8aa!important;
+  }
+  .today-photo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 45%!important;
+    filter:none!important;
+  }
+  .today-copy{
+    order:2!important;
+    min-height:0!important;
+    width:100%!important;
+    padding:22px 20px 24px!important;
+    background:#fffaf3!important;
+  }
+  .today-copy h2{
+    max-width:none!important;
+    font-size:36px!important;
+    margin:14px 0 8px!important;
+  }
+  .today-copy p{
+    max-width:none!important;
+    font-size:17px!important;
+    line-height:1.45!important;
+    margin-bottom:16px!important;
+  }
+  .home-main-btn{
+    width:100%!important;
+    min-height:52px!important;
+    margin-top:4px!important;
+  }
+
+  /* seis botões rigorosamente iguais */
+  .home-quick-grid-six{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .home-quick-card,
+  .home-quick-card.search{
+    width:100%!important;
+    min-width:0!important;
+    height:152px!important;
+    min-height:152px!important;
+    padding:15px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+    gap:5px!important;
+  }
+  .home-quick-card span,
+  .home-quick-card.search span{
+    width:auto!important;
+    margin:0 0 auto 0!important;
+    font-size:30px!important;
+    line-height:1!important;
+    text-align:left!important;
+  }
+  .home-quick-card b,
+  .home-quick-card.search b{
+    width:100%!important;
+    font-size:18px!important;
+    line-height:1.1!important;
+    text-align:left!important;
+  }
+  .home-quick-card small,
+  .home-quick-card.search small{
+    width:100%!important;
+    min-height:32px!important;
+    font-size:13px!important;
+    line-height:1.25!important;
+    text-align:left!important;
+  }
+}
+</style>
+
 </head>
 <body><div class="app">
 <header class="top"><div class="logo">Em Palavra<small>CONHEÇA • ENTENDA • VIVA</small></div><button onclick="randomStudy()">✦ Estudo surpresa</button></header>
