@@ -115,16 +115,64 @@ body{background:radial-gradient(circle at 10% 0%,rgba(184,135,80,.12),transparen
 #capitulo .actions:last-of-type{margin-bottom:0} #capitulo{margin-bottom:24px}
 @media(max-width:760px){.home-hero,.hero{background:linear-gradient(145deg,#fffaf3,#efdfcd)!important}}
 </style>
+
+<style id="em-palavra-mobile-polish">
+html,body{max-width:100%;overflow-x:hidden}
+.app{width:min(1180px,100%);max-width:100%;margin:0 auto}
+.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{min-width:0}
+.logo small{display:block;font-size:10px;letter-spacing:2.1px;margin-top:3px;color:#765238}
+.nav{max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{display:none}
+.home-hero{overflow:hidden}
+.home-hero>h1{margin-top:0}
+.today-study{overflow:hidden}
+.today-image svg{display:block;width:100%;height:100%;min-height:220px;object-fit:cover}
+.home-quick-card{min-width:0;text-align:center;justify-content:center;align-items:center}
+.home-quick-card.search{display:flex!important;flex-direction:column!important;gap:5px!important}
+.home-quick-card.search span,.home-quick-card.search b,.home-quick-card.search small{display:block!important;width:100%!important;text-align:center!important}
+.home-quick-card small{line-height:1.25}
+@media(max-width:700px){
+  body{font-size:16px}
+  .app{padding-left:0!important;padding-right:0!important}
+  .top{padding:16px 18px}
+  .logo{font-size:31px;line-height:1}
+  .top>button{margin-left:auto}
+  .nav{padding:10px 16px}
+  .chip{flex:0 0 auto}
+  .view{padding-left:16px!important;padding-right:16px!important}
+  .home-hero{padding:20px 16px!important;border-radius:22px}
+  .home-hero>h1{font-size:40px;line-height:1.02}
+  .home-tagline{font-size:19px;line-height:1.35}
+  .today-study{grid-template-columns:1fr!important;border-radius:18px}
+  .today-image{min-height:210px!important}
+  .today-copy{padding:20px!important}
+  .today-copy h2{font-size:34px}
+  .home-main-btn{width:100%;min-height:54px}
+  .home-section-title h2{font-size:30px;line-height:1.05}
+  .home-quick-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
+  .home-quick-card{padding:18px 8px!important;min-height:145px}
+  .home-quick-card span{font-size:30px}
+  .home-quick-card b{font-size:18px}
+  .home-quick-card small{font-size:14px}
+}
+@media(max-width:390px){
+  .logo{font-size:27px}
+  .top>button{font-size:13px;padding:9px 10px}
+  .home-quick-card{min-height:138px}
+}
+</style>
+
 </head>
 <body><div class="app">
-<header class="top"><div class="logo">Em Palavra<small>estudo bíblico interativo</small></div><button onclick="randomStudy()">✦ Estudo surpresa</button></header>
+<header class="top"><div class="logo">Em Palavra<small>CONHEÇA • ENTENDA • VIVA</small></div><button onclick="randomStudy()">✦ Estudo surpresa</button></header>
 <nav class="nav">
 <button class="chip active" onclick="tab('inicio',this)">Início</button><button class="chip" onclick="tab('biblia',this)">📖 Bíblia</button><button class="chip" onclick="tab('personagens',this)">👤 Personagens</button><button class="chip" onclick="tab('parabolas',this)">🕊️ Parábolas</button><button class="chip" onclick="tab('temas',this)">💡 Temas</button><button class="chip" onclick="tab('linha',this)">⏳ Linha do tempo</button><button class="chip" onclick="tab('busca',this)">🔎 Buscar</button>
 </nav>
 <section class="view show" id="inicio">
   <div class="home-hero">
-    <div class="home-eyebrow">LEIA • COMPREENDA • VIVA</div>
-    <h1>Em Palavra</h1>
+    
+    <h1>Estudo do dia</h1>
     <p class="home-tagline">Conheça a Bíblia. Entenda a Palavra. Viva o que Deus ensina.</p>
     <div class="today-study">
       <div class="today-image" aria-label="Ilustração do tabernáculo e do altar, relacionada a Levítico 9">
@@ -164,7 +212,7 @@ body{background:radial-gradient(circle at 10% 0%,rgba(184,135,80,.12),transparen
     <button class="home-quick-card parables" onclick="tab('parabolas',this)"><span>🕊️</span><b>Parábolas</b><small>Ensinamentos de Jesus</small></button>
     <button class="home-quick-card themes" onclick="tab('temas',this)"><span>💡</span><b>Temas</b><small>Assuntos da Bíblia</small></button>
     <button class="home-quick-card timeline" onclick="tab('linha',this)"><span>⏳</span><b>Linha do tempo</b><small>Os livros em ordem</small></button>
-    <button class="home-quick-card search" onclick="tab('busca',this)"><span>🔎</span><b>Buscar</b><small>Encontre na Bíblia</small></button>
+    <button class="home-quick-card search" onclick="tab('busca',this)"><span>🔎</span><b>Buscar</b><small>Encontre<br>na Bíblia</small></button>
   </div>
 
   <details class="home-how-accordion">
@@ -205,7 +253,7 @@ if(ctab==='visao')e.innerHTML=`<div class="verse">“${d.verse}”<br><small>${d
 if(ctab==='contexto')e.innerHTML=`<div class="section"><h3>🏺 Contexto histórico e cultural</h3><p>${d.context}</p></div><div class="section"><h3>📖 Contexto literário</h3><p>Leia este capítulo em continuidade com o que veio antes e depois. Observe a situação apresentada pelo próprio livro antes de buscar aplicações posteriores.</p></div><div class="section"><h3>👥 Personagens</h3><p>${d.characters}</p></div><div class="section"><h3>📍 Lugares</h3><p>${d.places}</p></div><div class="callout"><b>Como ler este capítulo</b><p>Pergunte: quem fala? Para quem? Qual é o problema? O que muda? O que se repete? O que o próprio texto explica?</p></div>`;
 if(ctab==='interpretacao')e.innerHTML=`<div class="section"><h3>🧠 Sentido central</h3><p>${d.interpretation}</p></div><div class="section"><h3>🔎 Observe antes de concluir</h3><p>${d.observe}</p></div><div class="section"><h3>🔗 Referências cruzadas</h3>${list(d.related)}</div><div class="section"><h3>⚠️ Cuidados na interpretação</h3><p>${d.caution}</p></div><div class="callout"><b>Conexão com o restante da Bíblia</b><p>As referências cruzadas ajudam a comparar temas e desenvolvimentos bíblicos, mas não devem apagar o sentido original do capítulo. Quando uma passagem do Novo Testamento retoma um tema do Antigo, primeiro compreenda o texto antigo e depois observe como o Novo Testamento o utiliza.</p></div>`;
 if(ctab==='aplicacao')e.innerHTML=`<div class="callout"><h3>❤️ Aplicação para a vida</h3><p>${d.application}</p></div><div class="section"><h3>🌱 Para sempre lembrar</h3><p>${d.forever||'Guarde o ensino central deste capítulo e releia o texto para fixá-lo no contexto.'}</p></div><div class="section"><h3>📌 Versículo-chave</h3><div class="verse">“${d.verse}”<br><small>${d.ref}</small></div></div><div class="section"><h3>🙏 Oração</h3><p>${d.prayer}</p></div>`;
-if(ctab==='reflexao')e.innerHTML=`<div class="callout"><h3>❓ Perguntas para reflexão</h3>${list(d.reflection)}</div><div class="section"><h3>📝 Anotações pessoais</h3><textarea id="notes" placeholder="Escreva o que você percebeu, dúvidas, aplicações e conexões..."></textarea><button onclick="saveNotes()" style="margin-top:8px">Salvar anotação</button><span id="noteStatus" class="saved" style="margin-left:8px"></span></div><div class="section"><h3>🧩 Miniquiz</h3><p class="note">Escolha uma resposta. O resultado fica registrado apenas nesta página.</p>${(Array.isArray(d.quiz)?d.quiz:[]).map((q,i)=>`<div style="margin:18px 0"><p><b>${i+1}. ${q[0]}</b></p><div class="tagrow"><button onclick="quiz(${i},true)">${q[1]}</button><button onclick="quiz(${i},false)">Outra resposta</button></div><div id="quiz-${i}"></div></div>`).join('')}</div>`;loadNotes()}
+if(ctab==='reflexao'){const daySeed=Math.floor(Date.now()/86400000);const extraRef=[`Que detalhe deste capítulo você não tinha percebido antes?`,`Que verdade deste texto você quer levar para o seu dia?`,`Que atitude prática este capítulo inspira em você?`,`Que característica de Deus aparece com mais clareza neste texto?`,`Há alguma advertência, promessa ou exemplo que merece ser lembrado?`,`Como este capítulo se conecta com o restante da história bíblica?`];const baseRef=Array.isArray(d.reflection)?d.reflection:[];const rotating=[extraRef[(daySeed+current)%extraRef.length],extraRef[(daySeed+current+2)%extraRef.length]];const refs=[...baseRef.slice(0,2),...rotating];const baseQuiz=Array.isArray(d.quiz)?d.quiz:[];const quizList=baseQuiz.length>1?(daySeed%2?[...baseQuiz].reverse():baseQuiz):baseQuiz;e.innerHTML=`<div class="callout"><h3>❓ Perguntas para reflexão</h3><p class="note">As perguntas complementares mudam automaticamente a cada dia.</p>${list(refs)}</div><div class="section"><h3>📝 Anotações pessoais</h3><textarea id="notes" placeholder="Escreva o que você percebeu, dúvidas, aplicações e conexões..."></textarea><button onclick="saveNotes()" style="margin-top:8px">Salvar anotação</button><span id="noteStatus" class="saved" style="margin-left:8px"></span></div><div class="section"><h3>🧩 Miniquiz</h3><p class="note">A ordem das perguntas muda automaticamente a cada dia.</p>${quizList.map((q,i)=>`<div style="margin:18px 0"><p><b>${i+1}. ${q[0]}</b></p><div class="tagrow"><button onclick="quiz(${i},true)">${q[1]}</button><button onclick="quiz(${i},false)">Outra resposta</button></div><div id="quiz-${i}"></div></div>`).join('')}</div>`;loadNotes()}
 
 
 
