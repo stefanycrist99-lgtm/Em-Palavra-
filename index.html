@@ -115,54 +115,37 @@ body{background:radial-gradient(circle at 10% 0%,rgba(184,135,80,.12),transparen
 #capitulo .actions:last-of-type{margin-bottom:0} #capitulo{margin-bottom:24px}
 @media(max-width:760px){.home-hero,.hero{background:linear-gradient(145deg,#fffaf3,#efdfcd)!important}}
 </style>
-
-<style id="em-palavra-mobile-polish">
-html,body{max-width:100%;overflow-x:hidden}
-.app{width:min(1180px,100%);max-width:100%;margin:0 auto}
-.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.logo{min-width:0}
-.logo small{display:block;font-size:10px;letter-spacing:2.1px;margin-top:3px;color:#765238}
-.nav{max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.nav::-webkit-scrollbar{display:none}
-.home-hero{overflow:hidden}
-.home-hero>h1{margin-top:0}
-.today-study{overflow:hidden}
-.today-image svg{display:block;width:100%;height:100%;min-height:220px;object-fit:cover}
-.home-quick-card{min-width:0;text-align:center;justify-content:center;align-items:center}
-.home-quick-card.search{display:flex!important;flex-direction:column!important;gap:5px!important}
+<style id="ep-interface-final">
+*{box-sizing:border-box} html,body{max-width:100%;overflow-x:hidden}
+.logo small{display:block;letter-spacing:2px;color:#765238}
+.today-study{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;padding:0!important;overflow:hidden!important;border-radius:22px!important;background:#fffaf3!important;border:1px solid #dfcfbd!important}
+.today-copy{grid-column:1!important;grid-row:1!important;padding:34px 34px 30px!important;z-index:2;background:linear-gradient(90deg,#fffaf3 72%,rgba(255,250,243,.88) 90%,rgba(255,250,243,.05) 100%)!important}
+.today-image{grid-column:2!important;grid-row:1!important;min-height:410px!important}
+.today-image svg{width:100%!important;height:100%!important;display:block!important}
+.today-copy h2{font-size:46px!important;line-height:1.05!important;margin:24px 0 12px!important}
+.today-copy p{font-size:18px!important;line-height:1.55!important}
+.today-label{font-size:15px!important;letter-spacing:2px!important}
+.home-main-btn{min-height:54px!important;padding:13px 28px!important;font-size:17px!important;border-radius:8px!important}
+.home-quick-card.search{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:4px!important}
 .home-quick-card.search span,.home-quick-card.search b,.home-quick-card.search small{display:block!important;width:100%!important;text-align:center!important}
-.home-quick-card small{line-height:1.25}
+.view,.card,.panel,.section{min-width:0}
 @media(max-width:700px){
-  body{font-size:16px}
-  .app{padding-left:0!important;padding-right:0!important}
-  .top{padding:16px 18px}
-  .logo{font-size:31px;line-height:1}
-  .top>button{margin-left:auto}
-  .nav{padding:10px 16px}
-  .chip{flex:0 0 auto}
-  .view{padding-left:16px!important;padding-right:16px!important}
-  .home-hero{padding:20px 16px!important;border-radius:22px}
-  .home-hero>h1{font-size:40px;line-height:1.02}
-  .home-tagline{font-size:19px;line-height:1.35}
-  .today-study{grid-template-columns:1fr!important;border-radius:18px}
-  .today-image{min-height:210px!important}
-  .today-copy{padding:20px!important}
-  .today-copy h2{font-size:34px}
-  .home-main-btn{width:100%;min-height:54px}
-  .home-section-title h2{font-size:30px;line-height:1.05}
-  .home-quick-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px}
-  .home-quick-card{padding:18px 8px!important;min-height:145px}
-  .home-quick-card span{font-size:30px}
-  .home-quick-card b{font-size:18px}
-  .home-quick-card small{font-size:14px}
+ .top{padding:15px 16px!important;gap:10px!important}.logo{font-size:30px!important}.logo small{font-size:9px!important}
+ .nav{overflow-x:auto!important;flex-wrap:nowrap!important;-webkit-overflow-scrolling:touch}.chip{flex:0 0 auto!important}
+ .view{padding-left:15px!important;padding-right:15px!important}
+ .home-hero{padding:18px 14px!important}.home-hero>h1{font-size:38px!important;line-height:1.05!important}
+ .today-study{grid-template-columns:1fr!important;position:relative!important;min-height:470px!important}
+ .today-image{grid-column:1!important;grid-row:1!important;position:absolute!important;inset:0!important;min-height:100%!important;opacity:.92!important}
+ .today-copy{grid-column:1!important;grid-row:1!important;padding:25px 22px!important;min-height:470px!important;background:linear-gradient(90deg,rgba(255,250,243,.98) 0%,rgba(255,250,243,.93) 55%,rgba(255,250,243,.20) 100%)!important}
+ .today-copy h2{font-size:38px!important;max-width:70%}.today-copy p{font-size:17px!important;max-width:70%}
+ .home-main-btn{margin-top:12px!important}
+ .home-quick-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .home-quick-card{min-width:0!important}
 }
-@media(max-width:390px){
-  .logo{font-size:27px}
-  .top>button{font-size:13px;padding:9px 10px}
-  .home-quick-card{min-height:138px}
+@media(max-width:410px){
+ .today-copy h2,.today-copy p{max-width:76%}.today-copy h2{font-size:34px!important}
 }
 </style>
-
 </head>
 <body><div class="app">
 <header class="top"><div class="logo">Em Palavra<small>CONHEÇA • ENTENDA • VIVA</small></div><button onclick="randomStudy()">✦ Estudo surpresa</button></header>
@@ -175,28 +158,29 @@ html,body{max-width:100%;overflow-x:hidden}
     <h1>Estudo do dia</h1>
     <p class="home-tagline">Conheça a Bíblia. Entenda a Palavra. Viva o que Deus ensina.</p>
     <div class="today-study">
-      <div class="today-image" aria-label="Ilustração do tabernáculo e do altar, relacionada a Levítico 9">
-        <svg viewBox="0 0 720 260" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="todaySky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#eadbc6"/><stop offset="1" stop-color="#f8f0e4"/></linearGradient>
-            <radialGradient id="todayGlow"><stop offset="0" stop-color="#fff8df" stop-opacity="1"/><stop offset="1" stop-color="#d4a75f" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="720" height="260" rx="18" fill="url(#todaySky)"/>
-          <ellipse cx="360" cy="108" rx="190" ry="105" fill="url(#todayGlow)"/>
-          <path d="M70 220 Q180 175 280 205 T490 202 T650 220 V260 H70Z" fill="#c9ad87" opacity=".55"/>
-          <path d="M175 190 L175 92 L360 34 L545 92 L545 190 Z" fill="#f5ead9" stroke="#704d2d" stroke-width="5"/>
-          <path d="M175 92 L360 34 L545 92" fill="none" stroke="#704d2d" stroke-width="7"/>
-          <path d="M220 190 V92 M500 190 V92" stroke="#a67c4f" stroke-width="7"/>
-          <path d="M280 190 V112 H440 V190" fill="#dbc2a1" stroke="#704d2d" stroke-width="5"/>
-          <path d="M300 190 V130 H420 V190" fill="#efe0c8" stroke="#8a633e" stroke-width="4"/>
-          <path d="M360 115 C332 145 350 160 360 172 C370 160 388 145 360 115Z" fill="#b97935" opacity=".9"/>
-          <path d="M360 126 C348 145 356 153 360 160 C364 153 372 145 360 126Z" fill="#8d4e25"/>
-          <circle cx="360" cy="48" r="7" fill="#a8783f"/>
-          <path d="M360 48 L360 70" stroke="#a8783f" stroke-width="3"/>
-          <text x="360" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#5b4028">A glória do Senhor se manifesta</text>
-        </svg>
-      </div>
-      <div class="today-copy">
+      <div class="today-image today-landscape" aria-label="Paisagem ao amanhecer">
+      <svg viewBox="0 0 720 430" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="epSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5c4a37"/><stop offset=".42" stop-color="#c79b65"/><stop offset="1" stop-color="#f4ddba"/>
+          </linearGradient>
+          <radialGradient id="epSun"><stop offset="0" stop-color="#fff8d9"/><stop offset=".25" stop-color="#f8d58e" stop-opacity=".95"/><stop offset="1" stop-color="#e7b765" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="720" height="430" fill="url(#epSky)"/>
+        <circle cx="420" cy="235" r="150" fill="url(#epSun)"/>
+        <path d="M0 305 Q90 245 180 290 T360 275 T540 295 T720 260 V430 H0Z" fill="#6f5b43" opacity=".7"/>
+        <path d="M0 335 Q110 285 220 320 T430 305 T720 315 V430 H0Z" fill="#3f392f" opacity=".82"/>
+        <path d="M610 0 C580 85 585 160 620 245 C650 315 660 365 650 430 H720 V0Z" fill="#2d291f"/>
+        <path d="M620 75 C540 35 455 28 360 50 M625 105 C535 90 480 105 420 145 M650 40 C585 15 540 5 500 0" fill="none" stroke="#2d291f" stroke-width="22" stroke-linecap="round"/>
+        <g fill="#2d291f" opacity=".98">
+          <circle cx="360" cy="50" r="35"/><circle cx="405" cy="58" r="42"/><circle cx="455" cy="42" r="38"/>
+          <circle cx="505" cy="30" r="45"/><circle cx="545" cy="62" r="40"/><circle cx="470" cy="110" r="34"/>
+        </g>
+        <text x="510" y="325" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="42" fill="#fff7e8">No princípio</text>
+        <text x="530" y="370" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="42" fill="#fff7e8">Deus...</text>
+      </svg>
+    </div>
+    <div class="today-copy">
         <div class="today-label">📖 ESTUDO DE HOJE</div>
         <h2>Levítico 9</h2>
         <p>A manifestação da glória do Senhor e o serviço dos sacerdotes.</p>
@@ -212,7 +196,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <button class="home-quick-card parables" onclick="tab('parabolas',this)"><span>🕊️</span><b>Parábolas</b><small>Ensinamentos de Jesus</small></button>
     <button class="home-quick-card themes" onclick="tab('temas',this)"><span>💡</span><b>Temas</b><small>Assuntos da Bíblia</small></button>
     <button class="home-quick-card timeline" onclick="tab('linha',this)"><span>⏳</span><b>Linha do tempo</b><small>Os livros em ordem</small></button>
-    <button class="home-quick-card search" onclick="tab('busca',this)"><span>🔎</span><b>Buscar</b><small>Encontre<br>na Bíblia</small></button>
+    <button class="home-quick-card search" onclick="tab('busca',this)"><span>🔎</span><b>Buscar</b><small>Encontre na Bíblia</small></button>
   </div>
 
   <details class="home-how-accordion">
@@ -253,7 +237,7 @@ if(ctab==='visao')e.innerHTML=`<div class="verse">“${d.verse}”<br><small>${d
 if(ctab==='contexto')e.innerHTML=`<div class="section"><h3>🏺 Contexto histórico e cultural</h3><p>${d.context}</p></div><div class="section"><h3>📖 Contexto literário</h3><p>Leia este capítulo em continuidade com o que veio antes e depois. Observe a situação apresentada pelo próprio livro antes de buscar aplicações posteriores.</p></div><div class="section"><h3>👥 Personagens</h3><p>${d.characters}</p></div><div class="section"><h3>📍 Lugares</h3><p>${d.places}</p></div><div class="callout"><b>Como ler este capítulo</b><p>Pergunte: quem fala? Para quem? Qual é o problema? O que muda? O que se repete? O que o próprio texto explica?</p></div>`;
 if(ctab==='interpretacao')e.innerHTML=`<div class="section"><h3>🧠 Sentido central</h3><p>${d.interpretation}</p></div><div class="section"><h3>🔎 Observe antes de concluir</h3><p>${d.observe}</p></div><div class="section"><h3>🔗 Referências cruzadas</h3>${list(d.related)}</div><div class="section"><h3>⚠️ Cuidados na interpretação</h3><p>${d.caution}</p></div><div class="callout"><b>Conexão com o restante da Bíblia</b><p>As referências cruzadas ajudam a comparar temas e desenvolvimentos bíblicos, mas não devem apagar o sentido original do capítulo. Quando uma passagem do Novo Testamento retoma um tema do Antigo, primeiro compreenda o texto antigo e depois observe como o Novo Testamento o utiliza.</p></div>`;
 if(ctab==='aplicacao')e.innerHTML=`<div class="callout"><h3>❤️ Aplicação para a vida</h3><p>${d.application}</p></div><div class="section"><h3>🌱 Para sempre lembrar</h3><p>${d.forever||'Guarde o ensino central deste capítulo e releia o texto para fixá-lo no contexto.'}</p></div><div class="section"><h3>📌 Versículo-chave</h3><div class="verse">“${d.verse}”<br><small>${d.ref}</small></div></div><div class="section"><h3>🙏 Oração</h3><p>${d.prayer}</p></div>`;
-if(ctab==='reflexao'){const daySeed=Math.floor(Date.now()/86400000);const extraRef=[`Que detalhe deste capítulo você não tinha percebido antes?`,`Que verdade deste texto você quer levar para o seu dia?`,`Que atitude prática este capítulo inspira em você?`,`Que característica de Deus aparece com mais clareza neste texto?`,`Há alguma advertência, promessa ou exemplo que merece ser lembrado?`,`Como este capítulo se conecta com o restante da história bíblica?`];const baseRef=Array.isArray(d.reflection)?d.reflection:[];const rotating=[extraRef[(daySeed+current)%extraRef.length],extraRef[(daySeed+current+2)%extraRef.length]];const refs=[...baseRef.slice(0,2),...rotating];const baseQuiz=Array.isArray(d.quiz)?d.quiz:[];const quizList=baseQuiz.length>1?(daySeed%2?[...baseQuiz].reverse():baseQuiz):baseQuiz;e.innerHTML=`<div class="callout"><h3>❓ Perguntas para reflexão</h3><p class="note">As perguntas complementares mudam automaticamente a cada dia.</p>${list(refs)}</div><div class="section"><h3>📝 Anotações pessoais</h3><textarea id="notes" placeholder="Escreva o que você percebeu, dúvidas, aplicações e conexões..."></textarea><button onclick="saveNotes()" style="margin-top:8px">Salvar anotação</button><span id="noteStatus" class="saved" style="margin-left:8px"></span></div><div class="section"><h3>🧩 Miniquiz</h3><p class="note">A ordem das perguntas muda automaticamente a cada dia.</p>${quizList.map((q,i)=>`<div style="margin:18px 0"><p><b>${i+1}. ${q[0]}</b></p><div class="tagrow"><button onclick="quiz(${i},true)">${q[1]}</button><button onclick="quiz(${i},false)">Outra resposta</button></div><div id="quiz-${i}"></div></div>`).join('')}</div>`;loadNotes()}
+if(ctab==='reflexao')e.innerHTML=`<div class="callout"><h3>❓ Perguntas para reflexão</h3>${list(d.reflection)}</div><div class="section"><h3>📝 Anotações pessoais</h3><textarea id="notes" placeholder="Escreva o que você percebeu, dúvidas, aplicações e conexões..."></textarea><button onclick="saveNotes()" style="margin-top:8px">Salvar anotação</button><span id="noteStatus" class="saved" style="margin-left:8px"></span></div><div class="section"><h3>🧩 Miniquiz</h3><p class="note">Escolha uma resposta. O resultado fica registrado apenas nesta página.</p>${(Array.isArray(d.quiz)?d.quiz:[]).map((q,i)=>`<div style="margin:18px 0"><p><b>${i+1}. ${q[0]}</b></p><div class="tagrow"><button onclick="quiz(${i},true)">${q[1]}</button><button onclick="quiz(${i},false)">Outra resposta</button></div><div id="quiz-${i}"></div></div>`).join('')}</div>`;loadNotes()}
 
 
 
